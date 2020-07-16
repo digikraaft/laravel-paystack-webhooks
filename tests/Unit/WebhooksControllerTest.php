@@ -2,8 +2,8 @@
 
 namespace Digikraaft\PaystackWebhooks\Tests\Unit;
 
-use Digikraaft\PaystackWebhooks\Events\WebhookReceived;
 use Digikraaft\PaystackWebhooks\Events\WebhookHandled;
+use Digikraaft\PaystackWebhooks\Events\WebhookReceived;
 use Digikraaft\PaystackWebhooks\Http\Controllers\WebhooksController;
 use Digikraaft\PaystackWebhooks\Tests\TestCase;
 use Illuminate\Http\Request;

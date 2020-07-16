@@ -3,8 +3,8 @@
 
 namespace Digikraaft\PaystackWebhooks\Http\Controllers;
 
-use Digikraaft\PaystackWebhooks\Events\WebhookReceived;
 use Digikraaft\PaystackWebhooks\Events\WebhookHandled;
+use Digikraaft\PaystackWebhooks\Events\WebhookReceived;
 use Digikraaft\PaystackWebhooks\Http\Middleware\VerifyWebhookSignature;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
