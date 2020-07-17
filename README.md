@@ -1,5 +1,8 @@
 # Handle Paystack Webhooks in a Laravel application
 ![tests](https://github.com/digikraaft/laravel-paystack-webhooks/workflows/tests/badge.svg)
+[![Build Status](https://scrutinizer-ci.com/g/digikraaft/laravel-paystack-webhooks/badges/build.png?b=master)](https://scrutinizer-ci.com/g/digikraaft/laravel-paystack-webhooks/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/digikraaft/laravel-paystack-webhooks/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/digikraaft/laravel-paystack-webhooks/?branch=master)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/digikraaft/laravel-paystack-webhooks/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 [Paystack](https://paystack.com/) can notify your application about various events via webhooks. This package can
