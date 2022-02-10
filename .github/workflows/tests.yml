@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: [7.4]
+        php: [7.4, 8.0]
         laravel: [8.*, 7.*, 6.*]
         include:
           - laravel: 8.*
@@ -24,7 +24,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2.4.0
 
       - name: Cache dependencies
         uses: actions/cache@v1
