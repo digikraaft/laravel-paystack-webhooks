@@ -13,11 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class WebhooksController extends Controller
 {
-    /**
-     * Create a new WebhooksController instance.
-     *
-     * @return void
-     */
+
     public function __construct()
     {
         if (config('paystackwebhooks.secret', env('PAYSTACK_SECRET'))) {
@@ -25,13 +21,8 @@ class WebhooksController extends Controller
         }
     }
 
-    /**
-     * Handle Paystack webhooks call.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function handleWebhook(Request $request)
+
+    public function handleWebhook(Request $request): \Symfony\Component\HttpFoundation\Response
     {
         $payload = json_decode($request->getContent(), true);
         $method = 'handle'.Str::studly(str_replace('.', '_', $payload['event']));
@@ -49,24 +40,14 @@ class WebhooksController extends Controller
         return $this->missingMethod();
     }
 
-    /**
-     * Handle successful calls on the controller.
-     *
-     * @param  array  $parameters
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    protected function successMethod($parameters = [])
+
+    protected function successMethod(array $parameters = []): \Symfony\Component\HttpFoundation\Response
     {
         return new Response('Webhook Handled', 200);
     }
 
-    /**
-     * Handle calls to missing methods on the controller.
-     *
-     * @param  array  $parameters
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    protected function missingMethod($parameters = [])
+
+    protected function missingMethod(array $parameters = []): \Symfony\Component\HttpFoundation\Response
     {
         return new Response;
     }
