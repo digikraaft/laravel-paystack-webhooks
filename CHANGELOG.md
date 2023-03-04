@@ -2,6 +2,9 @@
 
 All notable changes to `laravel-paystack-webhooks` will be documented in this file
 
+## 2.1.0 2023-03-04
+- Support for Laravel 10
+
 ## 2.0.0 2022-02-10
 - Support for Laravel 9
 
