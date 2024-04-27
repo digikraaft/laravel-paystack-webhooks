@@ -17,8 +17,9 @@ class VerifyWebhookSignature
 
         $input = $request->getContent();
 
-        $paystack_key = config('paystackwebhooks.secret', env('PAYSTACK_SECRET'));
-        if ($request->header('x-paystack-signature') !== hash_hmac('sha512', $input, $paystack_key)) {
+        $paystackKey = config('paystackwebhooks.secret', env('PAYSTACK_SECRET'));
+
+        if ($request->header('x-paystack-signature') !== hash_hmac('sha512', $input, $paystackKey)) {
             throw new AccessDeniedHttpException("Access Denied");
         }
 
