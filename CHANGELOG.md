@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-paystack-webhooks` will be documented in this file
 
+## 3.0 2024-10-25
+- Support for Laravel 11
+
+## 2.1.1 2024-04-27
+- Updated Paystack webhook header signature
+- 
 ## 2.1.0 2023-03-04
 - Support for Laravel 10
 
