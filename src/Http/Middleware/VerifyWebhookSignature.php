@@ -8,7 +8,7 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 class VerifyWebhookSignature
 {
 
-    public function handle($request, Closure $next): \Illuminate\Http\Response
+    public function handle($request, Closure $next)
     {
         // validate that callback is coming from Paystack
         if ((! $request->isMethod('post')) || ! $request->header('x-paystack-signature', null)) {
